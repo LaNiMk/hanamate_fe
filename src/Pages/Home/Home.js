@@ -1,11 +1,14 @@
 import { Fragment, useState, useEffect } from "react";
 import axios from "axios";
+import classes from "./Home.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Home = (props) => {
   const [auth, setAuth] = useState(false);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -34,9 +37,32 @@ const Home = (props) => {
         <div>
           <h1>{message}</h1>
           <h1>You are not Authorized</h1>
-          <button>Login</button>
+          <button onClick={() => navigate("/login")}>Login</button>
         </div>
       )}
+      <div className={classes.homeLayout}>
+        <div className={classes.outerBox}>
+          <div className={classes.startContainer}>
+            <div className={classes.startTitle}>
+              지금 바로
+              <br />
+              하나 메이트 시작하기
+            </div>
+          </div>
+          <div className={classes.buttonContainer}>
+            <div className={`${classes.homeButton} ${classes.button0}`}>
+              용돈
+            </div>
+            <div className={`${classes.homeButton} ${classes.button1}`}></div>
+            <div className={`${classes.homeButton} ${classes.button2}`}>
+              대출
+            </div>
+            <div className={`${classes.homeButton} ${classes.button3}`}>
+              모임통장
+            </div>
+          </div>
+        </div>
+      </div>
     </Fragment>
   );
 };

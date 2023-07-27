@@ -4,6 +4,7 @@ import classes from "./SignIn.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import useInput from "../../hooks/use-input";
 import axios from "axios";
+import SignLayout from "../../components/Layout/SignLayout";
 
 const validateID = (id) => {
   return /^[a-z0-9_-]{5,20}$/.test(id);
@@ -68,41 +69,43 @@ const SignIn = () => {
   }, [values, shouldSendRequest, formIsValid, navigate]);
 
   return (
-    <form className={classes.formContainer} onSubmit={submitHandler}>
-      <h1>HANAMATE</h1>
-      <Input
-        type="text"
-        id="ID"
-        name="ID"
-        label="ID"
-        placeholder="아이디"
-        required={true}
-        onChange={idChangeHandler}
-      />
-      <Input
-        type="password"
-        id="password"
-        name="password"
-        label="password"
-        placeholder="비밀번호"
-        required={true}
-        onChange={pwChangeHandler}
-      />
-      {!formIsValid && (
-        <div className={classes["error-message__container"]}>
-          <p className={classes["error-message"]}>
-            아이디 또는 비밀번호를 다시 입력해주세요.
-          </p>
-        </div>
-      )}
+    <SignLayout>
+      <form className={classes.formContainer} onSubmit={submitHandler}>
+        <h1>HANAMATE</h1>
+        <Input
+          type="text"
+          id="ID"
+          name="ID"
+          label="ID"
+          placeholder="아이디"
+          required={true}
+          onChange={idChangeHandler}
+        />
+        <Input
+          type="password"
+          id="password"
+          name="password"
+          label="password"
+          placeholder="비밀번호"
+          required={true}
+          onChange={pwChangeHandler}
+        />
+        {!formIsValid && (
+          <div className={classes["error-message__container"]}>
+            <p className={classes["error-message"]}>
+              아이디 또는 비밀번호를 다시 입력해주세요.
+            </p>
+          </div>
+        )}
 
-      <button type="submit">로그인</button>
-      <div className={classes.helperContainer}>
-        <Link to="/help/idInquiry">아이디 찾기</Link>
-        <Link to="/help/pwInquiry">비밀번호 찾기</Link>
-        <Link to="/sign/up">회원가입</Link>
-      </div>
-    </form>
+        <button type="submit">로그인</button>
+        <div className={classes.helperContainer}>
+          <Link to="/help/idInquiry">아이디 찾기</Link>
+          <Link to="/help/pwInquiry">비밀번호 찾기</Link>
+          <Link to="/join">회원가입</Link>
+        </div>
+      </form>
+    </SignLayout>
   );
 };
 

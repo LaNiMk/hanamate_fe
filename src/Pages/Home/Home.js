@@ -1,29 +1,42 @@
-import React, { Fragment } from "react";
-
-import { Link, useNavigate } from "react-router-dom";
-import classes from "./Home.module.css";
+import { Fragment, useState, useEffect } from "react";
+import axios from "axios";
 
 const Home = (props) => {
-  const navigate = useNavigate();
+  const [auth, setAuth] = useState(false);
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(true);
 
-  // 프로그램적으로 강제 이동시키기
-  const navigateHandler = () => {
-    navigate("signin");
-  };
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080", { withCredentials: true })
+      .then((res) => {
+        if (res.data.Status === "Success") {
+          setAuth(true);
+          setName(res.data.name);
+        } else {
+          setMessage(res.data.Message);
+        }
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <Fragment>
-      <h1>My Home Page</h1>
-      <p>
-        Go to <Link to="signup">Sign Up</Link>
-      </p>
-      <div className={classes.box}>
-        <p>
-          <button onClick={navigateHandler} className={classes.button1}>
-            버튼
-          </button>
-        </p>
-      </div>
+      {loading ? (
+        <div>Loading...</div>
+      ) : auth ? (
+        <div>
+          <h1>You are Authorized {name}</h1>
+          <button>Logout</button>
+        </div>
+      ) : (
+        <div>
+          <h1>{message}</h1>
+          <h1>You are not Authorized</h1>
+          <button>Login</button>
+        </div>
+      )}
     </Fragment>
   );
 };

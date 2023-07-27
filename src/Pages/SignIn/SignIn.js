@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Input from "../../components/Input/Input";
 import classes from "./SignIn.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useInput from "../../hooks/use-input";
+import axios from "axios";
 
 const validateID = (id) => {
   return /^[a-z0-9_-]{5,20}$/.test(id);
@@ -12,23 +13,59 @@ const validatePW = (pw) => {
 };
 
 const SignIn = () => {
-  const { isValid: idIsValid, valueChangeHandler: idChangeHandler } =
-    useInput(validateID);
+  const {
+    value: idValue,
+    isValid: idIsValid,
+    valueChangeHandler: idChangeHandler,
+  } = useInput(validateID);
 
-  const { isValid: pwIsValid, valueChangeHandler: pwChangeHandler } =
-    useInput(validatePW);
+  const {
+    value: pwValue,
+    isValid: pwIsValid,
+    valueChangeHandler: pwChangeHandler,
+  } = useInput(validatePW);
 
+  const [values, setValues] = useState({
+    id: "",
+    pw: "",
+  });
+  const [shouldSendRequest, setShouldSendRequest] = useState(false);
   const [formIsValid, setFormIsValid] = useState(true);
 
+  const navigate = useNavigate();
+  axios.defaults.withCredentials = true;
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(idIsValid && pwIsValid);
-    if (idIsValid && pwIsValid) {
-      setFormIsValid(true);
-    } else {
-      setFormIsValid(false);
+    setFormIsValid(idIsValid && pwIsValid);
+    if (!formIsValid) {
+      return;
     }
+
+    setValues((prevValues) => ({
+      ...prevValues,
+      id: idValue,
+      pw: pwValue,
+    }));
+    setShouldSendRequest(true);
   };
+
+  useEffect(() => {
+    if (shouldSendRequest && formIsValid) {
+      axios
+        .post("http://localhost:8080/sign/in", values)
+        .then((res) => {
+          if (res.data.Status === "Success") {
+            console.log(values);
+            alert(res.data.Status);
+            navigate("/");
+          } else {
+            alert(res.data.Message);
+          }
+        })
+        .catch((err) => console.log(err))
+        .finally(() => setShouldSendRequest(false));
+    }
+  }, [values, shouldSendRequest, formIsValid, navigate]);
 
   return (
     <form className={classes.formContainer} onSubmit={submitHandler}>
@@ -70,3 +107,5 @@ const SignIn = () => {
 };
 
 export default SignIn;
+
+// submitHandler에서 setValues 이후, 업데이트 된 최신 상태로 axios.post 요청을 보내고 싶어

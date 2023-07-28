@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import classes from "./Home.module.css";
+// import classes from "./Home.module.css";
 import HomeLayout from "../../components/Layout/HomeLayout";
 import HomeHeader from "../../components/Layout/HomeHeader";
-import HomeFooter from "../../components/Layout/HomeFooter";
+// import HomeFooter from "../../components/Layout/HomeFooter";
 import HomeButton from "../../components/Button/HomeButton";
 import HomeCard from "../../components/Card/HomeCard";
 import See from "../../assets/view.gif";

@@ -16,8 +16,9 @@ const Home = (props) => {
 
   useEffect(() => {
     axios
+      .get("hanamate-dgwxw0013-lake041.vercel.app/", { withCredentials: true })
       // .get("https://hanamate.onrender.com/", { withCredentials: true })
-      .get("http://localhost:8080/", { withCredentials: true })
+      // .get("http://localhost:8080/", { withCredentials: true })
       // .get("http://kzrcgaexjh.us18.qoddiapp.com/", { withCredentials: true })
       .then((res) => {
         if (res.data.Status === "Success") {

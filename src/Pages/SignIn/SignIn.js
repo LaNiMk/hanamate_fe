@@ -55,7 +55,7 @@ const SignIn = () => {
     if (shouldSendRequest && formIsValid) {
       axios
 
-        .post("https://hanamate.onrender.com//sign/in", values)
+        .post("https://hanamate.onrender.com/sign/in", values)
         // .post("http://localhost:8080/sign/in", values)
         // .post("http://kzrcgaexjh.us18.qoddiapp.com/sign/in", values)
         .then((res) => {

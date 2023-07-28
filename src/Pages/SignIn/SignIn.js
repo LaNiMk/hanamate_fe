@@ -35,7 +35,6 @@ const SignIn = () => {
   const [formIsValid, setFormIsValid] = useState(true);
 
   const navigate = useNavigate();
-  axios.defaults.withCredentials = true;
   const submitHandler = (event) => {
     event.preventDefault();
     setFormIsValid(idIsValid && pwIsValid);
@@ -53,9 +52,10 @@ const SignIn = () => {
 
   useEffect(() => {
     if (shouldSendRequest && formIsValid) {
+      axios.defaults.withCredentials = true;
       axios
-        .post("https://hanamate.onrender.com/sign/in", values)
-        // .post("http://localhost:8080/sign/in", values)
+        // .post("https://hanamate.onrender.com/sign/in", values)
+        .post("http://localhost:8080/sign/in", values)
         // .post("http://kzrcgaexjh.us18.qoddiapp.com/sign/in", values)
         .then((res) => {
           if (res.data.Status === "Success") {

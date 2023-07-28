@@ -55,14 +55,14 @@ const SignIn = () => {
     if (shouldSendRequest && formIsValid) {
       axios.defaults.withCredentials = true;
       axios
-        // .post("https://hanamate.onrender.com/sign/in", values)
-        .post("http://localhost:8080/sign/in", values)
+        .post("https://hanamate.onrender.com/sign/in", values)
+        // .post("http://localhost:8080/sign/in", values)
         // .post("http://kzrcgaexjh.us18.qoddiapp.com/sign/in", values)
         .then((res) => {
           if (res.data.Status === "Success") {
-            Cookie.set("token_react", res.data.token);
-            localStorage.setItem("token_react_local_storage", res.data.token);
-            console.log(values);
+            // Cookie.set("token_react", res.data.token);
+            // localStorage.setItem("token_react_local_storage", res.data.token);
+            // console.log(values);
             alert(res.data.Status);
             navigate("/");
           } else {

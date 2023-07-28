@@ -5,7 +5,7 @@ const HomeLayout = (props) => {
   return (
     <div className={classes.homeLayout}>
       <div className={classes.outerBox}>
-        <div className={classes.background} />
+        {/* <div className={classes.background} /> */}
         <div className={classes.innerBox}>{props.children}</div>
         <HomeFooter />
       </div>

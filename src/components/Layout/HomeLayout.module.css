@@ -7,17 +7,18 @@
   max-width: 480px;
   height: 100vh;
   margin: 0 auto;
-  background-color: #ccc;
+  /* background-color: #ccc; */
 }
 .innerBox {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   max-width: 480px;
   height: 100vh;
   padding: 20px;
   margin: 0 auto;
-  background-color: transparent;
-  z-index: 2;
+  background-color: #211b28;
+  /* background-color: transparent; */
+  /* z-index: 2; */
 }
 .background {
   position: absolute;

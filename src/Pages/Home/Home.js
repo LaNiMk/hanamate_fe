@@ -1,6 +1,7 @@
-import { Fragment, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import classes from "./Home.module.css";
+import HomeLayout from "../../components/Layout/HomeLayout";
 import HomeHeader from "../../components/Layout/HomeHeader";
 import HomeFooter from "../../components/Layout/HomeFooter";
 import HomeButton from "../../components/Button/HomeButton";
@@ -29,25 +30,15 @@ const Home = (props) => {
   }, []);
 
   return (
-    <Fragment>
-      <div className={classes.homeLayout}>
-        <div className={classes.outerBox}>
-          <HomeHeader
-            auth={auth}
-            name={name}
-            message={message}
-            loading={loading}
-          />
-          <HomeButton />
-          <HomeCard
-            title="적금"
-            description="어떤 적금 상품이 있을까?"
-            icon={See}
-          />
-          <HomeFooter />
-        </div>
-      </div>
-    </Fragment>
+    <HomeLayout>
+      <HomeHeader auth={auth} name={name} message={message} loading={loading} />
+      <HomeButton />
+      <HomeCard
+        title="적금"
+        description="어떤 적금 상품이 있을까?"
+        icon={See}
+      />
+    </HomeLayout>
   );
 };
 

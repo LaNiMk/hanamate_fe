@@ -1,11 +1,13 @@
 .footerBox {
-  width: calc(100% - 40px);
-  max-width: 440px;
-  height: 5rem;
-  background: #eee;
+  width: 100%;
+  max-width: 480px;
+  height: 5.5rem;
+  background: #ddd;
   border-radius: 20px 20px 0 0;
   position: absolute;
   bottom: 0;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ccc;
 }
 .navigationBox {
   width: 100%;
@@ -15,5 +17,6 @@
 }
 
 .navigationIcon {
-  width: 2rem;
+  width: 2.5rem;
+  margin-top: 0.5rem;
 }

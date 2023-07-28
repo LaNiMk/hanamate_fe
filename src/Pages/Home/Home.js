@@ -12,7 +12,8 @@ const Home = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080", { withCredentials: true })
+      // .get("http://localhost:8080/", { withCredentials: true })
+      .get("http://kzrcgaexjh.us18.qoddiapp.com/", { withCredentials: true })
       .then((res) => {
         if (res.data.Status === "Success") {
           setAuth(true);
@@ -43,11 +44,16 @@ const Home = (props) => {
       <div className={classes.homeLayout}>
         <div className={classes.outerBox}>
           <div className={classes.startContainer}>
-            <div className={classes.startTitle}>
-              지금 바로
-              <br />
-              하나 메이트 시작하기
-            </div>
+            {!loading && (
+              <button
+                className={classes.startTitle}
+                onClick={() => navigate("/login")}
+              >
+                지금 바로
+                <br />
+                하나 메이트 시작하기
+              </button>
+            )}
           </div>
           <div className={classes.buttonContainer}>
             <div className={`${classes.homeButton} ${classes.button0}`}>

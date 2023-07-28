@@ -1,5 +1,6 @@
 .footerBox {
   width: calc(100% - 40px);
+  max-width: 440px;
   height: 5rem;
   background: #eee;
   border-radius: 20px 20px 0 0;

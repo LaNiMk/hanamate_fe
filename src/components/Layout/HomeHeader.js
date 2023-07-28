@@ -20,7 +20,7 @@ const HomeHeader = (props) => {
             color: "white",
           }}
         >
-          <h1>You are Authorized {props.name}</h1>
+          <h1>{props.name}님 안녕하세요.</h1>
         </div>
       ) : (
         <div>

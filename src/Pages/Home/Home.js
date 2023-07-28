@@ -4,6 +4,8 @@ import classes from "./Home.module.css";
 import HomeHeader from "../../components/Layout/HomeHeader";
 import HomeFooter from "../../components/Layout/HomeFooter";
 import HomeButton from "../../components/Button/HomeButton";
+import HomeCard from "../../components/Card/HomeCard";
+import See from "../../assets/view.gif";
 
 const Home = (props) => {
   const [auth, setAuth] = useState(false);
@@ -37,6 +39,11 @@ const Home = (props) => {
             loading={loading}
           />
           <HomeButton />
+          <HomeCard
+            title="적금"
+            description="어떤 적금 상품이 있을까?"
+            icon={See}
+          />
           <HomeFooter />
         </div>
       </div>

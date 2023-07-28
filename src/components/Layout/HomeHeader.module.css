@@ -2,7 +2,7 @@
   width: fit-content;
   height: fit-content;
   margin-bottom: 20px;
-  color: white;
+  color: #fbfbfb;
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.25;
@@ -16,8 +16,8 @@
   height: 3rem;
   width: fit-content;
   font-size: 1.2rem;
-  font-weight: 500;
-  color: #fff;
+  font-weight: 700;
+  color: #fbfbfb;
   background: transparent;
   border: none;
 }

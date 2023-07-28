@@ -6,7 +6,7 @@
   column-gap: 15px;
 }
 .homeButton {
-  color: white;
+  color: #fbfbfb;
   padding: 20px;
   font-size: 1.25rem;
   font-weight: 700;
@@ -32,26 +32,27 @@
   align-items: flex-end;
 }
 .button0 {
-  background: linear-gradient(-45deg, #9900ff, #8038ff);
+  background: linear-gradient(-45deg, #a000ff, #8000ff);
   border-radius: 20px;
   grid-column: span 10;
   grid-row: span 10;
 }
+
 .button1 {
-  background: linear-gradient(-45deg, #f931a4, #f830a3);
+  background: linear-gradient(-45deg, #fd66ad, #fd46ad);
   border-radius: 20px;
   grid-column: span 7;
   grid-row: span 10;
 }
 .button2 {
-  background: linear-gradient(-45deg, #fd9524, #feb748);
+  background: linear-gradient(-45deg, #fe9748, #feb748);
   border-radius: 20px;
   grid-column: span 7;
   grid-row: span 8;
   padding: 20px;
 }
 .button3 {
-  background: linear-gradient(-45deg, #1a82cc, #23c2bb);
+  background: linear-gradient(-45deg, #1c91cd, #1cb1cd);
   border-radius: 20px;
   grid-column: span 10;
   grid-row: span 8;

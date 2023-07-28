@@ -61,6 +61,7 @@ const SignIn = () => {
         .then((res) => {
           if (res.data.Status === "Success") {
             Cookie.set("token_react", res.data.token);
+            localStorage.setItem("token_react_local_storage", res.data.token);
             console.log(values);
             alert(res.data.Status);
             navigate("/");

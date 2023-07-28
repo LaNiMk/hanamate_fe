@@ -60,7 +60,7 @@ const SignIn = () => {
         // .post("http://kzrcgaexjh.us18.qoddiapp.com/sign/in", values)
         .then((res) => {
           if (res.data.Status === "Success") {
-            Cookie.set("token", res.data.token);
+            Cookie.set("token_react", res.data.token);
             console.log(values);
             alert(res.data.Status);
             navigate("/");

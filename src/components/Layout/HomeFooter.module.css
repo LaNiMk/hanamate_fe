@@ -1,0 +1,18 @@
+.footerBox {
+  width: calc(100% - 40px);
+  height: 5rem;
+  background: #eee;
+  border-radius: 20px 20px 0 0;
+  position: absolute;
+  bottom: 0;
+}
+.navigationBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.5rem;
+}
+
+.navigationIcon {
+  width: 2rem;
+}

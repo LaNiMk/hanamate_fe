@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useInput from "../../hooks/use-input";
 import axios from "axios";
 import SignLayout from "../../components/Layout/SignLayout";
+import SignButton from "../../components/Button/SignButton";
 
 const validateID = (id) => {
   return /^[a-z0-9_-]{5,20}$/.test(id);
@@ -53,8 +54,8 @@ const SignIn = () => {
   useEffect(() => {
     if (shouldSendRequest && formIsValid) {
       axios
-        // .post("http://localhost:8080/sign/in", values)
-        .post("http://kzrcgaexjh.us18.qoddiapp.com/sign/in", values)
+        .post("http://localhost:8080/sign/in", values)
+        // .post("http://kzrcgaexjh.us18.qoddiapp.com/sign/in", values)
         .then((res) => {
           if (res.data.Status === "Success") {
             console.log(values);
@@ -99,7 +100,7 @@ const SignIn = () => {
           </div>
         )}
 
-        <button type="submit">로그인</button>
+        <SignButton type="submit">로그인</SignButton>
         <div className={classes.helperContainer}>
           <Link to="/help/idInquiry">아이디 찾기</Link>
           <Link to="/help/pwInquiry">비밀번호 찾기</Link>

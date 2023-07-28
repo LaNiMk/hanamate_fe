@@ -1,15 +1,3 @@
-.homeLayout {
-  width: 100vw;
-  height: 100vh;
-}
-.outerBox {
-  width: 100%;
-  max-width: 480px;
-  height: 100vh;
-  padding: 20px;
-  margin: 0 auto;
-  background-color: #211b28;
-}
 .buttonContainer {
   display: grid;
   grid-template-columns: repeat(17, 1fr);

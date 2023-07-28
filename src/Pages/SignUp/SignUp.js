@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Input from "../../components/Input/Input";
-import Button from "../../components/Button/Button";
+import SignButton from "../../components/Button/SignButton";
 import classes from "./SignUp.module.css";
 import useInput from "../../hooks/use-input";
 import { useNavigate } from "react-router-dom";
@@ -179,7 +179,7 @@ const SignUp = (props) => {
           label="userType"
           value={userType}
         />
-        <Button disabled={!formIsValid}>회원가입</Button>
+        <SignButton disabled={!formIsValid}>회원가입</SignButton>
       </form>
     </SignLayout>
   );

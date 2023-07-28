@@ -1,12 +1,12 @@
 import React from "react";
 
-import classes from "./Button.module.css";
+import classes from "./SignButton.module.css";
 
-const Button = (props) => {
+const SignButton = (props) => {
   return (
     <button
+      className={classes.signButton}
       type={props.type || "submit"}
-      className={`${classes.button} ${props.className}`}
       onClick={props.onClick}
       disabled={props.disabled}
     >
@@ -15,4 +15,4 @@ const Button = (props) => {
   );
 };
 
-export default Button;
+export default SignButton;

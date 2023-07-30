@@ -1,12 +1,10 @@
-import { useState, useEffect } from "react";
+import { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 // import classes from "./Home.module.css";
-import HomeLayout from "../../components/Layout/HomeLayout";
-import HomeHeader from "../../components/Layout/HomeHeader";
-// import HomeFooter from "../../components/Layout/HomeFooter";
-import HomeButton from "../../components/Button/HomeButton";
-import HomeCard from "../../components/Card/HomeCard";
-import See from "../../assets/view.gif";
+import HomeTitle from "../../components/Layout/HomeTitle";
+import HomeButtonBox from "../../components/Button/HomeButtonBox";
+import HomeCardBox from "../../components/Card/HomeCardBox";
+import Header from "../../components/Layout/Header";
 
 const Home = (props) => {
   const [auth, setAuth] = useState(false);
@@ -31,15 +29,13 @@ const Home = (props) => {
   }, []);
 
   return (
-    <HomeLayout>
-      <HomeHeader auth={auth} name={name} message={message} loading={loading} />
-      <HomeButton />
-      <HomeCard
-        title="적금"
-        description="어떤 적금 상품이 있을까?"
-        icon={See}
-      />
-    </HomeLayout>
+    <Fragment>
+      {/* {auth && <Header title="Home" />} */}
+      {/* <Header title="Home" /> */}
+      <HomeTitle auth={auth} name={name} message={message} loading={loading} />
+      <HomeButtonBox />
+      <HomeCardBox />
+    </Fragment>
   );
 };
 

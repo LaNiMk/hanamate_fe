@@ -6,7 +6,6 @@ import useInput from "../../hooks/use-input";
 import axios from "axios";
 import SignLayout from "../../components/Layout/SignLayout";
 import SignButton from "../../components/Button/SignButton";
-import Cookie from "js-cookie";
 
 const validateID = (id) => {
   return /^[a-z0-9_-]{5,20}$/.test(id);

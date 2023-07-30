@@ -18,3 +18,9 @@
   width: 30%;
   max-width: 100px;
 }
+
+@media (min-width: 480px) {
+  .container {
+    margin-top: 10vh;
+  }
+}

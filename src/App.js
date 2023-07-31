@@ -10,18 +10,12 @@ import Calendar from "./Pages/Calendar/Calendar";
 
 const router = createBrowserRouter([
   {
-    path: "/login",
-    element: <SignIn />,
-  },
-  {
-    path: "/join",
-    element: <SignUp />,
-  },
-  {
     path: "/",
     element: <RootLayout />,
     children: [
       { index: true, element: <Home /> },
+      { path: "login", element: <SignIn /> },
+      { path: "join", element: <SignUp /> },
       { path: "notification", element: <Notification /> },
       { path: "calendar", element: <Calendar /> },
       { path: "menu", element: <Menu /> },

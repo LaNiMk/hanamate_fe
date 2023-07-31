@@ -5,6 +5,7 @@ import HomeTitle from "../../components/Layout/HomeTitle";
 import HomeButtonBox from "../../components/Button/HomeButtonBox";
 import HomeCardBox from "../../components/Card/HomeCardBox";
 import Header from "../../components/Layout/Header";
+import Footer from "../../components/Layout/Footer";
 
 const Home = (props) => {
   const [auth, setAuth] = useState(false);

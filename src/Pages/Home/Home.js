@@ -4,7 +4,6 @@ import axios from "axios";
 import HomeTitle from "../../components/Layout/HomeTitle";
 import HomeButtonBox from "../../components/Button/HomeButtonBox";
 import HomeCardBox from "../../components/Card/HomeCardBox";
-import Header from "../../components/Layout/Header";
 import Footer from "../../components/Layout/Footer";
 
 const Home = (props) => {
@@ -36,6 +35,7 @@ const Home = (props) => {
       <HomeTitle auth={auth} name={name} message={message} loading={loading} />
       <HomeButtonBox />
       <HomeCardBox />
+      <Footer />
     </Fragment>
   );
 };

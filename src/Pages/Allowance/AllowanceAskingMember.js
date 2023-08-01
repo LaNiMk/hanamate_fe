@@ -2,7 +2,6 @@ import { Fragment } from "react";
 
 import classes from "./AllowanceAskingMember.module.css";
 import Header from "../../components/Layout/Header";
-import { MdClear } from "react-icons/md";
 import { PiMagnifyingGlassBold } from "react-icons/pi";
 import { FaCheck } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
@@ -11,7 +10,7 @@ import InputBox from "../../components/Input/InputBox";
 const AllowanceAskingMember = (props) => {
   return (
     <Fragment>
-      <Header title="누구에게 달라고 할래요?" right={<MdClear size="24" />} />
+      <Header left="blank" title="누구에게 달라고 할래요?" right="cancel" />
       <section className={classes.firstSection}>
         <InputBox left={<PiMagnifyingGlassBold size="24" fill="#aaa" />} placeholder="부모멤버의 연락처를 검색해봐요" />
         <div className={classes.memberList}>

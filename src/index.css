@@ -149,3 +149,9 @@ html {
 code {
   font-family: "Toss Product Sans", sans-serif;
 }
+
+:root {
+  --main-color-dark: #6527be;
+  --main-color: #9681eb;
+  --main-color-light: #d6d6ff;
+}

@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import classes from "./HomeTitle.module.css";
 import { useNavigate } from "react-router-dom";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
 
 const HomeTitle = (props) => {
   const navigate = useNavigate();

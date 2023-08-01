@@ -1,16 +1,23 @@
 import classes from "./Header.module.css";
-import { HouseDoor, PersonCircle } from "react-bootstrap-icons";
+import { FiChevronLeft } from "react-icons/fi";
+import { MdClear } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const Header = (props) => {
+  const navigate = useNavigate();
+  const backClickHandler = () => {
+    navigate(-1);
+  };
+
   return (
     <div className={classes.headerBox}>
-      {props.left || <div />}
-      {/* <HouseDoor size="32" /> */}
+      {props.left === "back" && <FiChevronLeft size="24" onClick={backClickHandler} />}
+      {props.left === "blank" && <div className={classes.blank} />}
       <div className={classes.titleBox}>
         <p>{props.title}</p>
       </div>
-      {props.right || <div />}
-      {/* <PersonCircle size="32" /> */}
+      {props.right === "cancel" && <MdClear size="24" onClick={backClickHandler} />}
+      {props.right === "blank" && <div className={classes.blank} />}
     </div>
   );
 };

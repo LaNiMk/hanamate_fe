@@ -10,6 +10,7 @@ import Calendar from "./Pages/Calendar/Calendar";
 import InputMoney from "./components/InputMoney/InputMoney";
 import AllowanceAskingMember from "./Pages/Allowance/AllowanceAskingMember";
 import AskSend from "./Pages/AskSend/AskSend";
+import AllowanceCheck from "./Pages/Allowance/AllowanceCheck";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: "input", element: <InputMoney /> },
       { path: "ask", element: <AllowanceAskingMember /> },
       { path: "send", element: <AskSend /> },
+      { path: "allowance/check", element: <AllowanceCheck /> },
     ],
   },
 ]);

@@ -24,6 +24,7 @@
 }
 .memberList {
   width: 100%;
+  margin-top: 20px;
 }
 .memberList .title {
   color: #777777;

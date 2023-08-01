@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import classes from "./RootLayout.module.css";
-import Footer from "./Footer";
 
 const RootLayout = (props) => {
   return (
@@ -9,7 +8,6 @@ const RootLayout = (props) => {
       <div className={classes.innerBox}>
         <Outlet />
       </div>
-      <Footer />
     </div>
   );
 };

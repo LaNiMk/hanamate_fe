@@ -6,16 +6,14 @@ import { MdClear } from "react-icons/md";
 import { PiMagnifyingGlassBold } from "react-icons/pi";
 import { FaCheck } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
+import InputBox from "../../components/Input/InputBox";
 
 const AllowanceAskingMember = (props) => {
   return (
     <Fragment>
       <Header title="누구에게 달라고 할래요?" right={<MdClear size="24" />} />
       <section className={classes.firstSection}>
-        <div className={classes.inputBox}>
-          <PiMagnifyingGlassBold size="24" fill="#aaa" />
-          <input placeholder="부모멤버의 연락처를 검색해봐요" />
-        </div>
+        <InputBox left={<PiMagnifyingGlassBold size="24" fill="#aaa" />} placeholder="부모멤버의 연락처를 검색해봐요" />
         <div className={classes.memberList}>
           <p className={classes.title}>즐겨찾는 멤버 1</p>
           <div className={classes.member}>

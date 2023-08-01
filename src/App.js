@@ -9,7 +9,7 @@ import RootLayout from "./components/Layout/RootLayout";
 import Calendar from "./Pages/Calendar/Calendar";
 import InputMoney from "./components/InputMoney/InputMoney";
 import AllowanceAskingMember from "./Pages/Allowance/AllowanceAskingMember";
-import AllowanceAskingMessage from "./Pages/Allowance/AllowanceAskingMessage";
+import AskSend from "./Pages/AskSend/AskSend";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       { path: "menu", element: <Menu /> },
       { path: "input", element: <InputMoney /> },
       { path: "ask", element: <AllowanceAskingMember /> },
-      { path: "send", element: <AllowanceAskingMessage /> },
+      { path: "send", element: <AskSend /> },
     ],
   },
 ]);

@@ -1,0 +1,18 @@
+.firstSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 1.2rem;
+}
+.title strong {
+  color: #9681eb;
+}
+.imageBox {
+  width: 100%;
+}
+.imageBox img {
+  width: 100%;
+}

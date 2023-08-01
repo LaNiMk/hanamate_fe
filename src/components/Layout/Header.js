@@ -4,11 +4,13 @@ import { HouseDoor, PersonCircle } from "react-bootstrap-icons";
 const Header = (props) => {
   return (
     <div className={classes.headerBox}>
-      <HouseDoor size="32" />
+      {props.left || <div />}
+      {/* <HouseDoor size="32" /> */}
       <div className={classes.titleBox}>
         <p>{props.title}</p>
       </div>
-      <PersonCircle size="32" />
+      {props.right || <div />}
+      {/* <PersonCircle size="32" /> */}
     </div>
   );
 };

@@ -7,6 +7,9 @@ import Notification from "./Pages/Notification/Notification";
 import Menu from "./Pages/Menu/Menu";
 import RootLayout from "./components/Layout/RootLayout";
 import Calendar from "./Pages/Calendar/Calendar";
+import InputMoney from "./components/InputMoney/InputMoney";
+import AllowanceAskingMember from "./Pages/Allowance/AllowanceAskingMember";
+import AllowanceAskingMessage from "./Pages/Allowance/AllowanceAskingMessage";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +22,9 @@ const router = createBrowserRouter([
       { path: "notification", element: <Notification /> },
       { path: "calendar", element: <Calendar /> },
       { path: "menu", element: <Menu /> },
+      { path: "input", element: <InputMoney /> },
+      { path: "ask", element: <AllowanceAskingMember /> },
+      { path: "send", element: <AllowanceAskingMessage /> },
     ],
   },
 ]);

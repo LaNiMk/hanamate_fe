@@ -20,16 +20,21 @@
   margin-top: 10%;
   margin-bottom: 15%;
 }
-.firstSection p {
+.number p {
   color: #6527be;
   font-size: 2rem;
   font-weight: 600;
   margin: 0 auto;
   border: none;
   background-color: transparent;
+  margin-bottom: 20px;
 }
 .firstSection p strong {
   font-weight: 700;
+}
+.firstSection .subMessage {
+  font-weight: 500;
+  color: #aaa;
 }
 .secondSection {
   display: flex;
@@ -45,11 +50,11 @@
 .buttonContainer button {
   width: fit-content;
   padding: 5px 10px;
-  background-color: #d6d6ff;
+  background-color: var(--main-color-superlight);
   color: #6527be;
   border: none;
   border-radius: 20px;
-  font-weight: 400;
+  font-weight: 500;
 }
 .numberContainer {
   width: 100%;

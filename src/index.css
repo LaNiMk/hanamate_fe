@@ -151,7 +151,15 @@ code {
 }
 
 :root {
+  color: #121212;
   --main-color-dark: #6527be;
   --main-color: #9681eb;
   --main-color-light: #d6d6ff;
+  --main-color-superlight: #eaeaff;
+  --secondary-color-dark: #8000ff;
+  --secondary-color: #9900ff;
+  --home-color-purple: #5f4de9;
+  --home-color-sky: #22a2c9;
+  --home-color-orange: #f88a24;
+  --home-color-red: #fc2a6a;
 }

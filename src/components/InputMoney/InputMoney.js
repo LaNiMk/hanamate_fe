@@ -8,16 +8,21 @@ import SignButton from "../Button/SignButton";
 const InputMoney = (props) => {
   return (
     <Fragment>
-      <Header title="용돈 보내기" />
+      <Header left="back" title={props.title} right="blank" />
       <div className={classes.container}>
         <section className={classes.firstSection}>
-          <h1>얼마를 달라고 할까요?</h1>
+          <h1>{props.message}</h1>
           <Form className={classes.number}>
             <p>
               <strong>1000</strong>원
             </p>
             <input type="hidden" value="1000원" />
           </Form>
+          {props.subMessage && (
+            <p className={classes.subMessage}>
+              {props.subMessage} {props.balance}원
+            </p>
+          )}
         </section>
         <section className={classes.secondSection}>
           <div className={classes.buttonContainer}>
@@ -42,7 +47,7 @@ const InputMoney = (props) => {
             </button>
           </div>
           <div className={classes.nextContainer}>
-            <SignButton>다음</SignButton>
+            <SignButton>{props.buttonMessage}</SignButton>
           </div>
         </section>
       </div>

@@ -1,0 +1,44 @@
+.container {
+  width: 100%;
+}
+.titleBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.seeMore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  color: var(--main-color-dark);
+  background-color: transparent;
+  gap: 5px;
+  opacity: 0.75;
+}
+.seeMoreText {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.contentBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.alertBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.alertMessage {
+  font-weight: 700;
+}

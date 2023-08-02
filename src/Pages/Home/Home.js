@@ -5,6 +5,7 @@ import HomeTitle from "../../components/Layout/HomeTitle";
 import HomeButtonBox from "../../components/Button/HomeButtonBox";
 import HomeCardBox from "../../components/Card/HomeCardBox";
 import Footer from "../../components/Layout/Footer";
+import Header from "../../components/Layout/Header";
 
 const Home = (props) => {
   const [auth, setAuth] = useState(false);
@@ -31,7 +32,7 @@ const Home = (props) => {
   return (
     <Fragment>
       {/* {auth && <Header title="Home" />} */}
-      {/* <Header title="Home" /> */}
+      {/* <Header left="blank" title="Home" right="blank" /> */}
       <HomeTitle auth={auth} name={name} message={message} loading={loading} />
       <HomeButtonBox />
       <HomeCardBox />

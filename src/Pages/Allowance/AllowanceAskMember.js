@@ -1,13 +1,13 @@
 import { Fragment } from "react";
 
-import classes from "./AllowanceAskingMember.module.css";
+import classes from "./AllowanceAskMember.module.css";
 import Header from "../../components/Layout/Header";
 import { PiMagnifyingGlassBold } from "react-icons/pi";
 import { FaCheck } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
 import InputBox from "../../components/Input/InputBox";
 
-const AllowanceAskingMember = (props) => {
+const AllowanceAskMember = (props) => {
   return (
     <Fragment>
       <Header left="blank" title="누구에게 달라고 할래요?" right="cancel" />
@@ -33,4 +33,4 @@ const AllowanceAskingMember = (props) => {
   );
 };
 
-export default AllowanceAskingMember;
+export default AllowanceAskMember;

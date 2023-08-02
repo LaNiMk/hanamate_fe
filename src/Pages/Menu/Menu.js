@@ -52,6 +52,7 @@ const Menu = (props) => {
         </div>
         <div className={classes.appVersion}>앱 버전 정보</div>
       </div>
+      <Footer />
     </Fragment>
   );
 };

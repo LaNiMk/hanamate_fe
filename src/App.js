@@ -8,9 +8,12 @@ import Menu from "./Pages/Menu/Menu";
 import RootLayout from "./components/Layout/RootLayout";
 import Calendar from "./Pages/Calendar/Calendar";
 import InputMoney from "./components/InputMoney/InputMoney";
-import AllowanceAskingMember from "./Pages/Allowance/AllowanceAskingMember";
+import AllowanceAskMember from "./Pages/Allowance/AllowanceAskMember";
 import AskSend from "./Pages/AskSend/AskSend";
-import AllowanceCheck from "./Pages/Allowance/AllowanceCheck";
+import AllowanceHistory from "./Pages/Allowance/AllowanceHistory";
+import Allowance from "./Pages/Allowance/Allowance";
+import AllowanceFill from "./Pages/Allowance/AllowanceFill";
+import AllowanceAskSetAmount from "./Pages/Allowance/AllowanceAskSetAmount";
 
 const router = createBrowserRouter([
   {
@@ -24,9 +27,22 @@ const router = createBrowserRouter([
       { path: "calendar", element: <Calendar /> },
       { path: "menu", element: <Menu /> },
       { path: "input", element: <InputMoney /> },
-      { path: "ask", element: <AllowanceAskingMember /> },
-      { path: "send", element: <AskSend /> },
-      { path: "allowance/check", element: <AllowanceCheck /> },
+      {
+        path: "allowance",
+        children: [
+          { index: true, element: <Allowance /> },
+          {
+            path: "ask",
+            children: [
+              { index: true, element: <AllowanceAskMember /> },
+              { path: "set", element: <AllowanceAskSetAmount /> },
+            ],
+          },
+          { path: "send", element: <AskSend /> },
+          { path: "check", element: <AllowanceHistory /> },
+          { path: "fill", element: <AllowanceFill /> },
+        ],
+      },
     ],
   },
 ]);

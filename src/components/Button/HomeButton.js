@@ -3,7 +3,7 @@ import Arrow from "../../assets/right-arrow-2.js";
 
 const HomeButton = (props) => {
   return (
-    <button className={`${classes.homeButton}`} style={{ background: props.background }}>
+    <button className={`${classes.homeButton}`} style={{ background: props.background }} onClick={props.onClick}>
       <div className={classes.leftContainer}>
         <div className={classes.iconBox}>{props.icon}</div>
         <div className={classes.textBox}>

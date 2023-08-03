@@ -96,5 +96,5 @@ export async function action({ request }) {
       console.log(res);
     })
     .catch((err) => console.log(err));
-  return;
+  return redirect("/");
 }

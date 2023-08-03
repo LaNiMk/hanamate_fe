@@ -15,17 +15,9 @@ const validatePW = (pw) => {
 };
 
 const SignIn = () => {
-  const {
-    value: idValue,
-    isValid: idIsValid,
-    valueChangeHandler: idChangeHandler,
-  } = useInput(validateID);
+  const { value: idValue, isValid: idIsValid, valueChangeHandler: idChangeHandler } = useInput(validateID);
 
-  const {
-    value: pwValue,
-    isValid: pwIsValid,
-    valueChangeHandler: pwChangeHandler,
-  } = useInput(validatePW);
+  const { value: pwValue, isValid: pwIsValid, valueChangeHandler: pwChangeHandler } = useInput(validatePW);
 
   const [values, setValues] = useState({
     id: "",
@@ -54,7 +46,7 @@ const SignIn = () => {
     if (shouldSendRequest && formIsValid) {
       axios.defaults.withCredentials = true;
       axios
-        .post("https://hanamate.onrender.com/sign/in", values)
+        .post("https://hanamate.onrender.com/signin", values)
         // .post("http://localhost:8080/sign/in", values)
         // .post("http://kzrcgaexjh.us18.qoddiapp.com/sign/in", values)
         .then((res) => {
@@ -97,9 +89,7 @@ const SignIn = () => {
         />
         {!formIsValid && (
           <div className={classes["error-message__container"]}>
-            <p className={classes["error-message"]}>
-              아이디 또는 비밀번호를 다시 입력해주세요.
-            </p>
+            <p className={classes["error-message"]}>아이디 또는 비밀번호를 다시 입력해주세요.</p>
           </div>
         )}
 

@@ -14,6 +14,7 @@ import AllowanceHistory from "./Pages/Allowance/AllowanceHistory";
 import Allowance from "./Pages/Allowance/Allowance";
 import AllowanceFill from "./Pages/Allowance/AllowanceFill";
 import AllowanceAskSetAmount from "./Pages/Allowance/AllowanceAskSetAmount";
+import { action as FillAction } from "./components/InputMoney/InputMoney";
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
           },
           { path: "send", element: <AskSend /> },
           { path: "check", element: <AllowanceHistory /> },
-          { path: "fill", element: <AllowanceFill /> },
+          { path: "fill", element: <AllowanceFill />, action: FillAction },
         ],
       },
     ],

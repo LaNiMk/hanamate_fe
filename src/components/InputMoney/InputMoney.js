@@ -1,9 +1,10 @@
 import classes from "./InputMoney.module.css";
 import Header from "../Layout/Header";
 import { Fragment, useState } from "react";
-import { Form, json, redirect } from "react-router-dom";
+import { Form, json, redirect, useNavigate } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import SignButton from "../Button/SignButton";
+import axios from "axios";
 
 const InputMoney = (props) => {
   const [amount, setAmount] = useState("0");
@@ -88,17 +89,12 @@ export async function action({ request }) {
     amount: data.get("amount"),
   };
 
-  let url = "https://hanamate.onrender.com/fill";
-  const response = await fetch(url, {
-    method: method,
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(requestData),
-  });
-  console.log(response);
-
-  console.log(response.data.Status);
-
-  return redirect("/");
+  axios.defaults.withCredentials = true;
+  axios
+    .post("https://hanamate.onrender.com/fill", requestData)
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => console.log(err));
+  return;
 }

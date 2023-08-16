@@ -11,12 +11,16 @@ const Header = (props) => {
 
   return (
     <div className={classes.headerBox}>
-      {props.left === "back" && <FiChevronLeft size="24" onClick={backClickHandler} />}
+      {props.left === "back" && (
+        <FiChevronLeft size="24" onClick={backClickHandler} />
+      )}
       {props.left === "blank" && <div className={classes.blank} />}
       <div className={classes.titleBox}>
         <p>{props.title}</p>
       </div>
-      {props.right === "cancel" && <MdClear size="24" onClick={backClickHandler} />}
+      {props.right === "cancel" && (
+        <MdClear size="24" onClick={backClickHandler} />
+      )}
       {props.right === "blank" && <div className={classes.blank} />}
     </div>
   );

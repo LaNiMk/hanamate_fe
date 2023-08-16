@@ -1,0 +1,35 @@
+/* Card.css */
+
+.card {
+  width: 100%;
+  border-radius: 16px;
+  padding: 20px;
+  background-image: linear-gradient(to right, #6f61c0, #b066e5);
+  color: #ffffff;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.card-header h2 {
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+.balance {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 10px 0;
+}

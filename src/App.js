@@ -15,6 +15,9 @@ import Allowance from "./Pages/Allowance/Allowance";
 import AllowanceFill from "./Pages/Allowance/AllowanceFill";
 import AllowanceAskSetAmount from "./Pages/Allowance/AllowanceAskSetAmount";
 import { action as FillAction } from "./components/InputMoney/InputMoney";
+import MyWallet from "./Pages/Allowance/MyWallet";
+import MyLoan from "./Pages/Loan/MyLoan";
+import LoanApplication from "./Pages/Loan/LoanApplication";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +47,9 @@ const router = createBrowserRouter([
           { path: "fill", element: <AllowanceFill />, action: FillAction },
         ],
       },
+      { path: "mywallet", element: <MyWallet /> },
+      { path: "loan", element: <MyLoan /> },
+      { path: "loanapplication", element: <LoanApplication /> },
     ],
   },
 ]);

@@ -1,0 +1,18 @@
+.myLoans {
+  background-color: #ffffff;
+  height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.cardSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.repaidTitle {
+  font-size: 20px;
+  padding-top: 30px;
+}

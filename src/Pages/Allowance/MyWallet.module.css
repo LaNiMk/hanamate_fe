@@ -1,0 +1,59 @@
+.cardSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.bottomSection {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.bottomButton {
+  background-color: #4b0082; /* 보라색 */
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.monthInfo {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.monthBox {
+  padding: 15px 14px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+}
+
+.prevMonth {
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+.year {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.month {
+  font-size: 18px;
+  font-weight: bold;
+}
